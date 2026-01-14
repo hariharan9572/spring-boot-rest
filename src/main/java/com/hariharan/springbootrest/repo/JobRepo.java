@@ -1,6 +1,7 @@
 package com.hariharan.springbootrest.repo;
 
 import com.hariharan.springbootrest.model.JobPost;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,7 +9,11 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
-public class JobRepo {
+public interface JobRepo extends JpaRepository<JobPost, Integer> {
+
+}
+
+/*public class JobRepo {
 
     // ArrayList to store JobPost objects
     List<JobPost> jobs = new ArrayList<>(Arrays.asList(
@@ -69,4 +74,4 @@ public class JobRepo {
                 jobs.remove(jobPost);
         }
     }
-}
+}*/
